@@ -1,0 +1,1 @@
+import{e as i}from"./PostDetails.astro_astro_type_script_index_0_lang.VTu63WyA.js";function t(e,c){e.accDescr&&c.setAccDescription?.(e.accDescr),e.accTitle&&c.setAccTitle?.(e.accTitle),e.title&&c.setDiagramTitle?.(e.title)}i(t,"populateCommonDb");export{t as p};

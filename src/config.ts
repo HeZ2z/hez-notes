@@ -16,7 +16,7 @@ export const SITE = {
     text: "在 Github 上编辑此页",
     url: "https://github.com/HeZ2z/hez-notes/edit/main/",
   },
-  dynamicOgImage: true,
+  dynamicOgImage: false,
   dir: "auto",
   lang: "zh-CN",
   timezone: "Asia/Shanghai",

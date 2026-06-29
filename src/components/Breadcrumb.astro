@@ -6,7 +6,7 @@ const currentUrlPath = Astro.url.pathname
   .replace(new RegExp(`^${BASE_PATH}`), "");
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
-if (breadcrumbList[0] === "posts") {
+if (breadcrumbList[0] === "posts" && !isNaN(Number(breadcrumbList[1]))) {
   breadcrumbList.splice(0, 2, `资料（第 ${breadcrumbList[1] || 1} 页）`);
 }
 

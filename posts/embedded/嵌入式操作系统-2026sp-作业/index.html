@@ -1,0 +1,332 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/hez-notes/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/"><meta name="generator" content="Astro v6.3.7"><!-- General Meta Tags --><title>嵌入式操作系统-2026sp-作业 | HeZzz&#39;s Notes</title><meta name="title" content="嵌入式操作系统-2026sp-作业 | HeZzz's Notes"><meta name="description" content="嵌入式操作系统 2026 春季学期的日常作业。"><meta name="author" content="HeZzz"><link rel="sitemap" href="/hez-notes/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="嵌入式操作系统-2026sp-作业 | HeZzz's Notes"><meta property="og:description" content="嵌入式操作系统 2026 春季学期的日常作业。"><meta property="og:url" content="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/"><meta property="og:image" content="https://hez2z.github.io/hez-notes/astropaper-og.jpg"><!-- Article Published/Modified time --><meta property="article:published_time" content="2026-06-29T05:19:26.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/"><meta property="twitter:title" content="嵌入式操作系统-2026sp-作业 | HeZzz's Notes"><meta property="twitter:description" content="嵌入式操作系统 2026 春季学期的日常作业。"><meta property="twitter:image" content="https://hez2z.github.io/hez-notes/astropaper-og.jpg"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"嵌入式操作系统-2026sp-作业 | HeZzz's Notes","image":"https://hez2z.github.io/hez-notes/astropaper-og.jpg","datePublished":"2026-06-29T05:19:26.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content="#212737"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hez-notes/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const currentTheme = localStorage.getItem("theme");
+        const themeValue =
+          currentTheme ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/hez-notes/_astro/Footer.COMnSinZ.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: \5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\4F5C\4E1A; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: \5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/hez-notes" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&amp;>li>a]:block [&amp;>li>a]:px-4 [&amp;>li>a]:py-3 [&amp;>li>a]:text-center [&amp;>li>a]:font-medium [&amp;>li>a]:hover:text-accent sm:[&amp;>li>a]:px-2 sm:[&amp;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/hez-notes/posts">
+资料
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/hez-notes/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/hez-notes" class="group inline-flex items-center gap-1 hover:text-accent -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module" src="/hez-notes/_astro/BackButton.astro_astro_type_script_index_0_lang.CUkB6YCF.js"></script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> 嵌入式操作系统-2026sp-作业 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-29T05:19:26.000Z">29 Jun, 2026</time> </div> <span aria-hidden="true" class="max-sm:hidden">|</span> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded/嵌入式系统设计与应用-2026sp-期中.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent max-sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <blockquote>
+<p>嵌入式操作系统 2026 春季学期的日常作业。</p>
+<p>本文连载于<a href="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A">嵌入式操作系统-2026sp-作业 | HeZzz</a>.</p>
+<p>答案来源于 GPT-5.5 和 NotebookLM，并由我校对，可能不完全准确，仅供参考。</p>
+</blockquote>
+<p>🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。<a href="mailto:hez2z@foxmail.com">邮箱hez2z@foxmail.com</a> 或者在 <a href="https://qm.qq.com/q/ojSHMvHG5a">速通之家</a> 群里 <code>@9¾</code>。
+根据您上传的嵌入式操作系统课程（uC/OS-II）课件和复习资料，为您整理了全部 4 次作业（hw1 - hw4）的参考答案。内容力求严谨、客观，并紧扣课件中的标准表述。</p>
+<hr>
+<h2 id="第一章">第一章</h2>
+<h3 id="请给出操作系统的定义作用和分类">请给出操作系统的定义、作用和分类？</h3>
+<p>计算机由硬件和软件两部分组成，操作系统是配置在计算机硬件上的第一层软件，在计算机系统中占据了特殊重要的地位；</p>
+<p>作用：</p>
+<ul>
+<li>补平硬件差异的界面或是说隐藏硬件，让应用程序可以在上面运行。</li>
+<li>程序设计人员无须考虑到不同硬件所造成的差异，可专注于所擅长领域的开发。</li>
+</ul>
+<h3 id="请列举至少三种常见的嵌入式操作系统">请列举至少三种常见的嵌入式操作系统？</h3>
+<p>根据课件介绍，常见的嵌入式操作系统包括：</p>
+<ol>
+<li><strong>uC/OS-II</strong> / <strong>uC/OS-III</strong>（微控制器实时操作系统）</li>
+<li><strong>FreeRTOS</strong>（广泛应用的开源实时操作系统）</li>
+<li><strong>RT-Thread</strong>（国内主流的开源实时操作系统）</li>
+<li><strong>VxWorks</strong>（高可靠性的商用实时操作系统）</li>
+<li><strong>SylixOS</strong>（国内自主研发的大型实时操作系统）</li>
+</ol>
+<h3 id="思考题结合当前人工智能发展的趋势根据你的理解阐述嵌入式系统的发展将会迎来哪些机遇和挑战">思考题：结合当前人工智能发展的趋势，根据你的理解，阐述嵌入式系统的发展将会迎来哪些机遇和挑战？</h3>
+<ul>
+<li><strong>机遇</strong>：
+<ul>
+<li><strong>边缘智能（Edge AI）的兴起</strong>：人工智能模型（TinyML）正从小微型化发展，允许在低功耗的嵌入式微控制器上直接运行轻量级神经网络，减少对云端带宽的依赖，极大降低了延迟，增强了隐私性。</li>
+<li><strong>新应用场景的爆发</strong>：智能家居、自动驾驶、物联网穿戴设备、机器人等领域对实时、低功耗本地AI处理的需求激增，推动了嵌入式芯片与操作系统的硬件加速和软硬件协同设计。</li>
+</ul>
+</li>
+<li><strong>挑战</strong>：
+<ul>
+<li><strong>极其受限的资源与高算力的矛盾</strong>：AI模型即使经过量化裁剪，其计算和存储开销对于RAM和闪存空间通常只有几百KB的嵌入式设备而言依然是沉重负担。</li>
+<li><strong>实时性保证</strong>：AI推理计算（如卷积、矩阵乘法）往往耗时较长，如何在有限的主频下保证操作系统关键控制任务的硬实时响应是极大考验。</li>
+<li><strong>功耗与散热限制</strong>：边缘设备多为电池供电或无风扇设计，如何在提升算力的同时控制功耗，对芯片设计和系统电源管理提出了更高要求。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="第二章">第二章</h2>
+<h3 id="ucos-ii中的任务有哪-5-种状态各状态之间是如何转换的">uC/OS-II中的任务有哪 5 种状态？各状态之间是如何转换的？</h3>
+<ul>
+<li><strong>5种状态</strong>：<strong>睡眠状态</strong> (Dormant)、<strong>就绪状态</strong> (Ready)、<strong>运行状态</strong> (Running)、<strong>等待状态</strong> (Waiting/Pending)、<strong>中断服务状态</strong> (ISR)。</li>
+<li><strong>转换过程</strong>：
+<ol>
+<li><strong>睡眠 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 就绪</strong>：任务被创建（调用 <code>OSTaskCreate</code>/<code>OSTaskCreateExt</code>）后进入就绪状态。</li>
+<li><strong>就绪 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 运行</strong>：当该任务是就绪表中优先级最高的任务时，经过调度器调度（<code>OS_Sched</code> / <code>OSIntExit</code>）获得CPU使用权，进入运行状态。</li>
+<li><strong>运行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 就绪</strong>：运行中的任务被更高优先级的任务抢占，或调用了让出 CPU 的系统函数，返回就绪状态。</li>
+<li><strong>运行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 等待</strong>：运行中的任务因为等待某个事件（如信号量、邮箱、队列）或主动调用延时函数（<code>OSTimeDly</code>）而挂起，进入等待状态。</li>
+<li><strong>等待 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 就绪</strong>：等待的事件发生、延时时间到、或被其他任务恢复（<code>OSTaskResume</code>），重新进入就绪状态。</li>
+<li><strong>运行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 中断服务</strong>：运行任务被硬件中断打断，进入中断服务状态。</li>
+<li><strong>中断服务 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 运行</strong>：中断服务结束（调用 <code>OSIntExit</code>），若没有更高优先级任务就绪，则继续运行原任务。</li>
+<li><strong>中断服务 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 就绪</strong>：中断服务结束（调用 <code>OSIntExit</code>），若有更高优先级的任务就绪，原任务被剥夺CPU，进入就绪状态。</li>
+<li><strong>任意状态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> 睡眠</strong>：调用删除任务函数（<code>OSTaskDel</code>）销毁任务控制块与任务栈。</li>
+</ol>
+</li>
+</ul>
+<p><img src="/hez-notes/pic/embedded/uc-os-ii-task-state-transition.png" alt="任务状态转换图"></p>
+<h3 id="ucos-ii-v252最多可以管理多少个任务为什么">uC/OS-II V2.52最多可以管理多少个任务？为什么？</h3>
+<ul>
+<li>最多可以管理 <strong>64 个任务</strong>。</li>
+<li><strong>原因</strong>：uC/OS-II 的调度算法基于优先级，在 V2.52 版本中支持 0～63 共 64 个优先级。因为每个任务必须拥有唯一的优先级，所以总任务数不能超过 64 个。其中，系统保留了 8 个优先级（最低的若干个，如空闲任务占最低优先级，统计任务占次低），因此留给用户的用户任务最多有 56 个。</li>
+</ul>
+<h3 id="数组-ostcbpriotbl-有什么用途">数组 OSTCBPrioTbl[] 有什么用途？</h3>
+<ul>
+<li><strong>用途</strong>：该数组是一个以<strong>任务优先级</strong>为下标、保存指向该任务控制块（<code>OS_TCB</code>）指针的数组。</li>
+<li><strong>意义</strong>：有了它，系统在进行任务管理、状态更改或查找特定任务时，无须遍历 TCB 链表，仅需通过优先级作为数组下标就能在常数时间内（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>）直接获取对应任务的 TCB 指针，大幅提高了系统的运行效率。</li>
+</ul>
+<h3 id="变量osrdygrp有什么作用">变量OSRdyGrp有什么作用？</h3>
+<ul>
+<li><strong>作用</strong>：<code>OSRdyGrp</code> 是一个 8 位的无符号整型变量，用于表示任务就绪表中哪些组（Row）有任务处于就绪状态。</li>
+<li><strong>原理解析</strong>：任务就绪表 <code>OSRdyTbl[8]</code> 是一个 8 字节的数组（共 64 位），被划分为 8 个任务组。<code>OSRdyGrp</code> 中的每一位对应就绪表数组 <code>OSRdyTbl</code> 的一个下标。如果 <code>OSRdyGrp</code> 的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 位置为 1，则表示 <code>OSRdyTbl[i]</code> 所对应的组中至少有一个任务处于就绪状态。调度器通过它可快速定位就绪组，避免逐位扫描。</li>
+</ul>
+<h3 id="请给出辅助数组osunmaptbl的赋值过程">请给出辅助数组OSUnMapTbl[]的赋值过程</h3>
+<ul>
+<li><strong>赋值原理</strong>：<code>OSUnMapTbl[]</code> 是一个大小为 256 的优先级判定只读查找表，其目的是为了快速找出某 8 位二进制数中“最低位的 1 在第几位”（因为优先级值越小，优先级越高）。其赋值过程逻辑如下：
+<ul>
+<li><strong>第 0 位为 1</strong> 的所有数（即所有奇数，如 1, 3, 5…），对应的查找表输出值均为 <strong>0</strong>。</li>
+<li><strong>第 0 位为 0，第 1 位为 1</strong> 的所有数（如 2, 6, 10, 14…），其输出值均为 <strong>1</strong>。</li>
+<li><strong>第 0、1 位均为 0，第 2 位为 1</strong> 的所有数（如 4, 12, 20…），其输出值均为 <strong>2</strong>。</li>
+<li>依此类推，直到所有高位。若 8 位全是 0（代表没有任务就绪），该索引对应的输出一般设为 0。</li>
+</ul>
+</li>
+<li>通过这样的数学规律对 256 个元素赋以 0~7 之间的值，保证了系统能通过查表在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 时间内找出最高优先级的任务组号和组内偏移号。</li>
+</ul>
+<hr>
+<h2 id="第三章">第三章</h2>
+<h3 id="简述ucos-ii-的中断响应过程">简述uC/OS-II 的中断响应过程</h3>
+<ul>
+<li>接收到中断请求后，这时如果CPU处于中断允许状态（即中断是开放的），系统就会中止正在运行的当前任务，而按照中断向量的指向转而去运行中断服务子程序</li>
+<li>当中断服务子程序的运行结束后，系统将会根据情况返回到被中止的任务继续运行或者转向运行另一个具有更高优先级别的就绪任务…
+<ul>
+<li>注意：uC/OS-II是可剥夺型内核，因此中断服务子程序运行结束之后，系统将会根据情况进行一次调度去运行优先级别最高的就绪任务，而并不是一定要继续运行被中断的任务!</li>
+</ul>
+</li>
+</ul>
+<h3 id="ucos-ii-的系统时钟是如何实现的在时钟节拍服务程序中做了什么工作">uC/OS-II 的系统时钟是如何实现的？在时钟节拍服务程序中做了什么工作？</h3>
+<ul>
+<li><strong>系统时钟的实现</strong>：
+uC/OS-II 利用硬件定时器产生毫秒级的周期性硬件中断（即时钟节拍，Clock Tick），频率通常在 10Hz 至 100Hz 之间。该中断触发后会定时调用时钟节拍中断服务程序 <code>OSTickISR()</code>。</li>
+<li><strong>在时钟节拍服务程序（<code>OSTickISR</code>）中所做的工作</strong>：
+<ol>
+<li><strong>保护现场</strong>：保存当前运行任务的 CPU 寄存器，调用 <code>OSIntEnter()</code>。</li>
+<li><strong>时钟节拍处理</strong>：调用系统的核心时钟节拍处理函数 <code>OSTimeTick()</code>。</li>
+<li><strong>退出中断并调度</strong>：调用 <code>OSIntExit()</code>，然后执行中断返回。</li>
+</ol>
+</li>
+<li><strong><code>OSTimeTick()</code> 函数内部具体工作</strong>：
+<ol>
+<li><strong>累加系统时间</strong>：将全局变量 <code>OSTime</code>（系统节拍计数器）加 1。</li>
+<li><strong>遍历 TCB 链表</strong>：遍历系统中所有任务的控制块。</li>
+<li><strong>延时递减</strong>：对每一个 <code>OSTCBDly</code>（任务等待时限）不为 0 的任务，将其减 1。</li>
+<li><strong>恢复就绪</strong>：若递减后 <code>OSTCBDly</code> 变为 0 且任务未被手工挂起，则清除其等待状态，将其状态修改为就绪，并在任务就绪表（<code>OSRdyTbl</code>）中进行登记，使该任务重新参与调度。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="第四章">第四章</h2>
+<h3 id="什么叫优先级反转这种现象在什么情况下发生如何防止这种现象的发生">什么叫优先级反转？这种现象在什么情况下发生？如何防止这种现象的发生？</h3>
+<ul>
+<li><strong>定义：</strong>
+<ul>
+<li>在可剥夺型内核中，当某任务以独占方式共享资源时，会出现<strong>低优先级任务先于高优先级任务</strong>而被运行的现象，这叫做优先级反转</li>
+</ul>
+</li>
+<li><strong>产生优先级反转的原因：</strong>
+<ul>
+<li>一个低优先级的任务在获得了信号量使用共享资源时，被具有较高优先级的任务打断而不能释放信号量，从而使正在等待这个信号量的更高优先级的任务因得不到信号量而被迫处于等待状态。在这个等待期间，就让优先级别低于它而高于占据信号量的任务的任务先运行。</li>
+</ul>
+</li>
+<li><strong>对系统的影响：</strong>
+<ul>
+<li>优先级反转极大的恶化了高优先级任务的运行环境，是实时系统所无法容忍的</li>
+</ul>
+</li>
+<li><strong>一种解决方法：</strong>
+<ul>
+<li>使占有信号量的任务的优先级暂时提升到比现有最高优先级任务更高的一个级别上，在其释放信号量之后再恢复原来的优先级别</li>
+</ul>
+</li>
+</ul>
+<h3 id="消息队列的结构包括哪些部分各部分之间是如何关联的">消息队列的结构包括哪些部分？各部分之间是如何关联的？</h3>
+<ul>
+<li><strong>组成部分</strong>：
+<ol>
+<li><strong>事件控制块（<code>OS_EVENT</code>）</strong>：其事件类型（<code>OSEventType</code>）设为 <code>OS_EVENT_TYPE_Q</code>。包含等待该队列的任务等待表 <code>OSEventTbl[]</code> 和组变量 <code>OSEventGrp</code>，其指针成员 <code>OSEventPtr</code> 指向队列控制块。</li>
+<li><strong>队列控制块（<code>OS_Q</code>）</strong>：用于管理消息指针数组的结构。包含 <code>OSQStart</code>（指向消息指针数组的首地址）、<code>OSQEnd</code>（指向数组结束的下一个单元）、<code>OSQIn</code>（指向下一个插入消息的位置）、<code>OSQOut</code>（指向下一个取出消息的位置）、<code>OSQSize</code>（数组容量）等。</li>
+<li><strong>消息队列（<code>MsgTbl[]</code>）</strong>：一个指针数组，数组内的每个元素存放的是具体消息（数据缓冲区）的内存指针。</li>
+<li><strong>消息</strong>：消息队列中存放的实际数据，通常是指向数据缓冲区的指针。**</li>
+</ol>
+</li>
+<li><strong>关联方式</strong>：
+<ul>
+<li>事件控制块通过其内部的 <code>OSEventPtr</code> 成员指向队列控制块（<code>OS_Q</code>）。</li>
+<li>队列控制块（<code>OS_Q</code>）通过其 <code>OSQStart</code> 成员指向消息指针数组（<code>MsgTbl[]</code>）的起点。</li>
+<li>任务需要请求或发送队列消息时，首先访问 <code>OS_EVENT</code>，通过其指针找到 <code>OS_Q</code>，再依据 <code>OS_Q</code> 的读写指针在消息指针数组中存取消息。</li>
+</ul>
+</li>
+</ul>
+<h3 id="能否使用全局变量来实现任务间的通信如果可以有什么缺点">能否使用全局变量来实现任务间的通信？如果可以，有什么缺点？</h3>
+<ul>
+<li><strong>是否可以</strong>：<strong>可以</strong>。任务之间确实可以通过读写共同的全局变量来传递数据。</li>
+<li><strong>缺点</strong>：
+<ol>
+<li><strong>数据不一致与竞争风险（Race Conditions）</strong>：由于内核是可抢占的，一个任务在对全局变量进行多步骤写入时可能被高优先级任务抢占，导致读任务获取到“写了一半”的无意义或损坏的数据（即破坏了操作的原子性）。</li>
+<li><strong>无法实现真正的任务同步</strong>：读变量的任务由于无法得知写变量任务何时更新了数据，往往需要采用轮询（Busy-waiting）机制，这会白白浪费大量的 CPU 资源。</li>
+<li><strong>破坏可重入性（Non-reentrancy）</strong>：不加保护地使用全局变量会导致其相关函数变为不可重入函数，增加了程序的调试难度。</li>
+<li><strong>不支持任务阻塞挂起</strong>：使用全局变量时，当数据未就绪，任务无法像使用信号量或邮箱那样进入挂起等待状态让出 CPU，破坏了多任务的调度效率。</li>
+</ol>
+</li>
+</ul> </article> <hr class="my-8 border-dashed"> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded/嵌入式系统设计与应用-2026sp-期中.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/hez-notes/tags/嵌入式操作系统/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 嵌入式操作系统 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&amp;body=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E4%BD%9C%E4%B8%9A/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">  <a href="/hez-notes/posts/embedded-systems/嵌入式系统设计与应用-2025sp-回忆版" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">嵌入式系统设计与应用-2025sp-回忆版</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/hez-notes/_astro/PostDetails.astro_astro_type_script_index_0_lang.VTu63WyA.js"></script>

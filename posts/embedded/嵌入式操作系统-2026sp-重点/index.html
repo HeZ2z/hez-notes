@@ -1,0 +1,684 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/hez-notes/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/"><meta name="generator" content="Astro v6.3.7"><!-- General Meta Tags --><title>嵌入式操作系统-2026sp-重点 | HeZzz&#39;s Notes</title><meta name="title" content="嵌入式操作系统-2026sp-重点 | HeZzz's Notes"><meta name="description" content="嵌入式操作系统 2026 春季学期的重点。"><meta name="author" content="HeZzz"><link rel="sitemap" href="/hez-notes/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="嵌入式操作系统-2026sp-重点 | HeZzz's Notes"><meta property="og:description" content="嵌入式操作系统 2026 春季学期的重点。"><meta property="og:url" content="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/"><meta property="og:image" content="https://hez2z.github.io/hez-notes/astropaper-og.jpg"><!-- Article Published/Modified time --><meta property="article:published_time" content="2026-06-29T14:19:26.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/"><meta property="twitter:title" content="嵌入式操作系统-2026sp-重点 | HeZzz's Notes"><meta property="twitter:description" content="嵌入式操作系统 2026 春季学期的重点。"><meta property="twitter:image" content="https://hez2z.github.io/hez-notes/astropaper-og.jpg"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"嵌入式操作系统-2026sp-重点 | HeZzz's Notes","image":"https://hez2z.github.io/hez-notes/astropaper-og.jpg","datePublished":"2026-06-29T14:19:26.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content="#212737"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hez-notes/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const currentTheme = localStorage.getItem("theme");
+        const themeValue =
+          currentTheme ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/hez-notes/_astro/Footer.COMnSinZ.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: \5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\91CD\70B9; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\91CD\70B9) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\91CD\70B9) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\91CD\70B9) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF-2026-sp-\91CD\70B9) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: \5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\64CD\4F5C\7CFB\7EDF) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/hez-notes" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&amp;>li>a]:block [&amp;>li>a]:px-4 [&amp;>li>a]:py-3 [&amp;>li>a]:text-center [&amp;>li>a]:font-medium [&amp;>li>a]:hover:text-accent sm:[&amp;>li>a]:px-2 sm:[&amp;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/hez-notes/posts">
+资料
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/hez-notes/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/hez-notes" class="group inline-flex items-center gap-1 hover:text-accent -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module" src="/hez-notes/_astro/BackButton.astro_astro_type_script_index_0_lang.CUkB6YCF.js"></script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> 嵌入式操作系统-2026sp-重点 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-29T14:19:26.000Z">29 Jun, 2026</time> </div> <span aria-hidden="true" class="max-sm:hidden">|</span> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded/嵌入式系统设计与应用-2026sp-重点.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent max-sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <blockquote>
+<p>嵌入式操作系统 2026 春季学期的重点。</p>
+<p>本文连载于<a href="https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9">嵌入式操作系统-2026sp-重点 | HeZzz</a>.</p>
+<p>答案来源于 GPT-5.5 和 NotebookLM，并由我校对，可能不完全准确，仅供参考。</p>
+</blockquote>
+<p>🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。<a href="mailto:hez2z@foxmail.com">邮箱hez2z@foxmail.com</a> 或者在 <a href="https://qm.qq.com/q/ojSHMvHG5a">速通之家</a> 群里 <code>@9¾</code>。</p>
+<hr>
+<h2 id="第-2-章-ucos-ii-中的任务">第 2 章 uC/OS-II 中的任务</h2>
+<h3 id="1-任务的基本概念">1. 任务的基本概念</h3>
+<ul>
+<li><strong>定义与本质</strong>：从应用程序设计角度，<strong>μC/OS-II</strong> 的任务等同于一个<strong>线程</strong>。它是一个能对任务运行进行管理和调度的多任务操作系统。(来源：课件第2章 P.6)</li>
+<li><strong>任务的组成</strong>：μC/OS-II 的任务由以下三部分组成：
+<ul>
+<li><strong>任务代码</strong>：任务的实际执行部分。</li>
+<li><strong>任务堆栈</strong>：用于保存任务运行时的上下文（即工作环境）。</li>
+<li><strong>任务控制块</strong>（<strong>OS_TCB</strong>）：用于保存任务的属性信息。(来源：课件第2章 P.6)</li>
+</ul>
+</li>
+<li><strong>任务的分类</strong>：分为<strong>用户任务</strong>（由应用程序设计者编写，用以解决应用问题）和<strong>系统任务</strong>（系统提供，为应用程序提供服务）。(来源：课件第2章 P.7)</li>
+<li><strong>数量上限</strong>：μC/OS-II V2.52 最多可管理 <strong>64</strong> 个任务，其中系统任务（预留） <strong>8</strong> 个，用户任务最多可创建 <strong>56</strong> 个。(来源：课件第2章 P.7)</li>
+</ul>
+<h4 id="任务状态属性表">任务状态属性表</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">任务状态</th><th align="left">英文名词</th><th align="left">状态说明</th></tr></thead><tbody><tr><td align="left"><strong>睡眠状态</strong></td><td align="left">Dormant</td><td align="left">任务代码驻留在存储器中，但尚未交给操作系统进行管理</td></tr><tr><td align="left"><strong>就绪状态</strong></td><td align="left">Ready</td><td align="left">任务已做好准备，等待分配 CPU 的使用权</td></tr><tr><td align="left"><strong>运行状态</strong></td><td align="left">Running</td><td align="left">任务获得了 CPU 的使用权，正在执行其代码</td></tr><tr><td align="left"><strong>等待状态</strong></td><td align="left">Waiting</td><td align="left">任务因延时、等待事件或手工挂起等原因，暂时让出 CPU 使用权</td></tr><tr><td align="left"><strong>中断服务状态</strong></td><td align="left">ISR</td><td align="left">正在运行的任务被中断打断，CPU 正在执行中断服务子程序</td></tr></tbody></table>
+<p><em>(来源：课件第2章 P.8, P.9)</em></p>
+<ul>
+<li><strong>用户任务一般结构</strong>：带有临界段保护的无限循环结构。在进入不可中断代码前使用 <strong>OS_ENTER_CRITICAL()</strong> 关中断，退出时使用 <strong>OS_EXIT_CRITICAL()</strong> 开中断。(来源：课件第2章 P.10)</li>
+<li><strong>系统任务详述</strong>：
+<ul>
+<li><strong>空闲任务</strong>（<code>OSTaskIdle()</code>）：优先级被固定为最低的 <strong>OS_LOWEST_PRIO</strong>。当无任何用户任务可运行时系统便执行它。其主要工作是在临界区内递增计数器 <strong>OSIdleCtr</strong>。(来源：课件第2章 P.13, P.14)</li>
+<li><strong>统计任务</strong>（<code>OSTaskStat()</code>）：每秒计算一次 CPU 的利用率，计算结果以百分比形式存放在变量 <strong>OSCPUUsage</strong> 中。启用此任务需将 <code>OS_CFG.H</code> 中的配置常数 <strong>OS_TASK_STAT_EN</strong> 设置为 <strong>1</strong>，且必须在创建此任务前调用 <strong>OSStatInit()</strong> 进行初始化。(来源：课件第2章 P.15)</li>
+</ul>
+</li>
+<li><strong>优先级规则</strong>：每个任务必须有唯一的优先级别。文件 <code>OS_CFG.H</code> 中的常数 <strong>OS_LOWEST_PRIO</strong> 代表最低优先级。最低优先级 <code>OS_LOWEST_PRIO</code> 自动赋给空闲任务，次低优先级 <code>OS_LOWEST_PRIO-1</code> 自动赋给统计任务。(来源：课件第2章 P.16)</li>
+</ul>
+<hr>
+<h3 id="2-任务堆栈">2. 任务堆栈</h3>
+<ul>
+<li><strong>定义与作用</strong>：堆栈是存储器中按数据后进先出（<strong>LIFO</strong>）原则组织的连续存储空间。作用是满足任务切换和响应中断时保护 CPU 寄存器内容及存储任务私有数据的需要。(来源：课件第2章 P.18)</li>
+<li><strong>声明与关联</strong>：通过数据类型 <strong>OS_STK</strong> 声明堆栈数组（例如 <code>OS_STK TaskStk[TASK_STK_SIZE]</code>）。在调用任务创建函数 <strong>OSTaskCreate()</strong> 时，将数组栈顶指针传递给参数 <code>ptos</code>，从而将堆栈与任务关联。(来源：课件第2章 P.19)</li>
+<li><strong>增长方向</strong>：随处理器不同而不同。分为“从低地址向高地址方向增长”（<strong>OS_STK_GROWTH</strong>=0）和“从高地址向低地址方向增长”（<strong>OS_STK_GROWTH</strong>=1）。(来源：课件第2章 P.22, P.10)</li>
+<li><strong>初始化函数</strong>：<strong>OSTaskStkInit()</strong> 在创建任务时被调用。其作用是预置任务堆栈的寄存器状态，使堆栈结构如同任务已经被中断打断过一样，以便任务首次调度时能通过出栈指令恢复执行。(来源：课件第2章 P.25, P.26)</li>
+</ul>
+<hr>
+<h3 id="3-任务控制块">3. 任务控制块</h3>
+<ul>
+<li><strong>任务控制块 (OS_TCB)</strong>：用来记录任务的堆栈指针、状态、优先级等与任务管理相关的属性表。(来源：课件第2章 P.27)</li>
+<li><strong>OS_TCB 核心成员字段</strong>：
+<ul>
+<li><code>OSTCBStkPtr</code>：指向任务堆栈栈顶的指针。</li>
+<li><code>OSTCBNext</code> / <code>OSTCBPrev</code>：双向链表指针，用于连接所有处于非睡眠态的任务。</li>
+<li><code>OSTCBDly</code>：任务等待的时限（单位：节拍数）。</li>
+<li><code>OSTCBStat</code>：任务的当前状态标志。</li>
+<li><code>OSTCBPrio</code>：任务的优先级别。</li>
+<li><code>OSTCBX</code> / <code>OSTCBY</code> / <code>OSTCBBitX</code> / <code>OSTCBBitY</code>：用于快速访问就绪表的辅助数据。(来源：课件第2章 P.28)</li>
+</ul>
+</li>
+<li><strong>任务状态取值 (OSTCBStat)</strong>：包括 <strong>OS_STAT_RDY</strong>（就绪）、<strong>OS_STAT_SEM</strong>（等信号量）、<strong>OS_STAT_MBOX</strong>（等邮箱）、<strong>OS_STAT_Q</strong>（等队列）、<strong>OS_STAT_SUSPEND</strong>（挂起）、<strong>OS_STAT_MUTEX</strong>（等互斥信号量）。(来源：课件第2章 P.29)</li>
+<li><strong>双链表管理</strong>：初始化时系统创建单向的<strong>空任务控制块链表</strong>（<strong>OSTCBFreeList</strong>）；当调用 <code>OSTaskCreate()</code> 时，系统从空闲链表中取出一个节点，填入任务属性后，链入双向的<strong>任务控制块链表</strong>（<strong>OSTCBList</strong>）的头部。(来源：课件第2章 P.30, P.32)</li>
+<li><strong>OSTCBPrioTbl[]</strong>：以任务优先级为下标保存任务控制块指针的数组，用于快速检索指定优先级的 TCB。(来源：课件第2章 P.31)</li>
+</ul>
+<hr>
+<h3 id="4-任务就绪表及其操作">4. 任务就绪表及其操作</h3>
+<ul>
+<li>
+<p><strong>就绪表结构</strong>：就绪表包含 1 字节的变量 <strong>OSRdyGrp</strong> 和大小为 8 字节的数组 <strong>OSRdyTbl[8]</strong>。(来源：课件第2章 P.36)</p>
+</li>
+<li>
+<p><strong>优先级映射</strong>：使用 6 位二进制数表示 0~63 优先级别。高 3 位代表数组元素的下标（组号），低 3 位代表数组元素中具体的数据位（位号）。(来源：课件第2章 P.40)</p>
+</li>
+<li>
+<p><strong>登记操作（将任务置为就绪）</strong>：</p>
+<p><code>OSRdyGrp |= OSMapTbl[prio >> 3];</code></p>
+<p><code>OSRdyTbl[prio >> 3] |= OSMapTbl[prio &#x26; 0x07];</code></p>
+<p>(来源：课件第2章 P.43)</p>
+</li>
+<li>
+<p><strong>注销操作（使任务脱离就绪）</strong>：</p>
+<p><code>if ((OSRdyTbl[prio >> 3] &#x26;= ~OSMapTbl[prio &#x26; 0x07]) == 0) OSRdyGrp &#x26;= ~OSMapTbl[prio >> 3];</code></p>
+<p>(来源：课件第2章 P.44)</p>
+</li>
+<li>
+<p><strong>快速检索最高优先级</strong>：为加快计算速度，系统使用预先定义好的大小为 256 的辅助数组 <strong>OSUnMapTbl[]</strong> 进行查表：</p>
+<p><code>y = OSUnMapTbl[OSRdyGrp];</code></p>
+<p><code>prio = (y &#x3C;&#x3C; 3) + OSUnMapTbl[OSRdyTbl[y]];</code></p>
+<p>(来源：课件第2章 P.45)</p>
+</li>
+</ul>
+<hr>
+<h3 id="5-任务调度任务切换">5. 任务调度、任务切换</h3>
+<ul>
+<li><strong>调度思想</strong>：抢占式内核机制，每时每刻总是让优先级最高的就绪任务处于运行状态。(来源：课件第2章 P.35)</li>
+<li><strong>调度器的分类</strong>：
+<ul>
+<li><strong>任务级调度器</strong>：由函数 <strong>OSSched()</strong> 运行。(来源：课件第2章 P.51)</li>
+<li><strong>中断级调度器</strong>：由函数 <strong>OSIntExit()</strong> 运行。(来源：课件第2章 P.51)</li>
+</ul>
+</li>
+<li><strong>任务切换动作</strong>：由汇编编写的函数 <strong>OSCtxSw()</strong> 执行，包含以下 7 步：
+<ol>
+<li>被中止任务的断点指针 PC 压入任务堆栈。</li>
+<li>通用寄存器内容保存至当前堆栈。</li>
+<li>将堆栈指针 SP 当前值保存到对应 TCB 的 <code>OSTCBStkPtr</code> 中。</li>
+<li>获取待运行高优先级任务的 TCB 指针。</li>
+<li>使 CPU 通过任务控制块获得待运行任务的堆栈指针，更新系统 SP。</li>
+<li>恢复待运行任务堆栈中保存的通用寄存器内容。</li>
+<li>出栈断点指针并跳转执行（RETI）。(来源：课件第2章 P.56, P.57)</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="6-任务调度器函数-ossched">6. 任务调度器函数 OSSched()</h3>
+<ul>
+<li>
+<p><strong>执行条件</strong>：当前没有在中断服务程序内（<code>OSIntNesting == 0</code>）且调度器未被锁定（<code>OSLockNesting == 0</code>）。(来源：课件第2章 P.52)</p>
+</li>
+<li>
+<p><strong>核心源码执行逻辑</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">void</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> OSSched</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">void</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">) {</span></span>
+<span class="line"><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">    // 关中断并保存状态</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    OS_ENTER_CRITICAL</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">    if</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> ((OSLockNesting </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">|</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> OSIntNesting) </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">==</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 0</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">) {</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 检查条件</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">        y </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#24292EFF;--shiki-dark:#C5E478"> OSUnMapTbl</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">[OSRdyGrp];</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">        OSPrioHighRdy </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> (INT8U)((y </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">&#x3C;&#x3C;</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 3</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">) </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">+</span><span style="--shiki-light:#24292EFF;--shiki-dark:#C5E478"> OSUnMapTbl</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">[</span><span style="--shiki-light:#24292EFF;--shiki-dark:#C5E478">OSRdyTbl</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">[y]]);</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 找最高优先级</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">        if</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> (OSPrioHighRdy </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">!=</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> OSPrioCur) {</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 若非当前运行任务</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">            OSTCBHighRdy </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#24292EFF;--shiki-dark:#C5E478"> OSTCBPrioTbl</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">[OSPrioHighRdy];</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">            OSCtxSwCtr</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">++</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 上下文切换计数器加 1</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">            OS_TASK_SW</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 激发切换宏</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">        }</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    OS_EXIT_CRITICAL</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre>
+<p><em>(来源：课件第2章 P.52)</em></p>
+</li>
+</ul>
+<hr>
+<h3 id="7-任务创建">7. 任务创建</h3>
+<ul>
+<li><strong>创建函数</strong>：主要使用 <strong>OSTaskCreate()</strong> 函数。其原型为：
+<code>INT8U OSTaskCreate(void (*task)(void *pd), void *pdata, OS_STK *ptos, INT8U prio);</code> (来源：课件第2章 P.20)</li>
+<li><strong>执行限制</strong>：在调用启动函数 <strong>OSStart()</strong> 之前，必须已经创建了至少一个用户任务。(来源：课件第2章 P.60)</li>
+<li><strong>一般方法</strong>：调用 <code>OSStart()</code> 之前先创建一个最高优先级的起始任务 <code>TaskStart</code>，在 <code>TaskStart</code> 中安装时钟并创建其他各个应用任务。(来源：课件第2章 P.60, P.61)</li>
+</ul>
+<hr>
+<h3 id="8-任务的挂起和恢复">8. 任务的挂起和恢复</h3>
+<ul>
+<li><strong>挂起任务 (OSTaskSuspend)</strong>：强行剥夺当前任务的运行权并从就绪表中删除，使其进入等待状态。函数参数若为 <code>OS_PRIO_SELF</code> (0xFF)，则表示挂起调用该函数自身。不能挂起空闲任务。(来源：课件第2章 P.67)</li>
+<li><strong>恢复任务 (OSTaskResume)</strong>：让被挂起的任务清除挂起标志。如果该任务已处于就绪状态，且优先级高于当前运行的任务，系统将引发一次调度。(来源：课件第2章 P.68)</li>
+</ul>
+<hr>
+<h3 id="9-请求删除任务函数">9. 请求删除任务函数</h3>
+<ul>
+<li><strong>安全删除原因</strong>：被动删除的任务往往存在其动态分配的局部资源未被释放的风险。(来源：课件第2章 P.75)</li>
+<li><strong>联络机制流程</strong>：
+<ul>
+<li>提出删除请求的任务 A 调用 <strong>OSTaskDelReq(prio)</strong>，使目标任务 B 的 TCB 成员 <strong>OSTCBDelReq</strong> 被置为 <strong>OS_TASK_DEL_REQ</strong>。(来源：课件第2章 P.75, P.77)</li>
+<li>被删除任务 B 在运行中查询 <code>OSTCBDelReq(OS_PRIO_SELF) == OS_TASK_DEL_REQ</code>。一旦符合，B 任务主动释放占用的内存、信号量等资源，最后调用 <code>OSTaskDel(OS_PRIO_SELF)</code> 实施自我删除。(来源：课件第2章 P.75, P.78)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="10-任务初始化">10. 任务初始化</h3>
+<ul>
+<li><strong>初始化动作</strong>：由 <strong>OSInit()</strong> 函数完成。该函数执行以下操作：
+<ol>
+<li>对所有的全局变量和数据结构进行初始化。</li>
+<li>创建空闲任务 <code>OSTaskIdle</code> 并设置为最低优先级。</li>
+<li>创建包括空任务控制块链表在内的 5 个空数据缓冲区链表。</li>
+<li>建立数组 <code>OSTCBPrioTbl[]</code>。(来源：课件第2章 P.81)</li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="第-3-章-ucos-ii-的中断和时钟">第 3 章 uC/OS-II 的中断和时钟</h2>
+<h3 id="1-中断响应过程">1. 中断响应过程</h3>
+<ul>
+<li><strong>流程步骤</strong>：CPU 接收到可屏蔽中断 -> 挂起当前任务 -> 将寄存器内容压入当前任务堆栈 -> 运行 <strong>OSIntEnter()</strong> -> 记录中断嵌套层数加 1 -> 保存 SP 指针 -> 重新开中断 -> 执行用户的 ISR 中断代码 -> 运行 <strong>OSIntExit()</strong>。 (来源：课件第3章 P.5, P.6)</li>
+<li><strong>中断级切换机制</strong>：如果就绪表中出现更高优先级就绪任务，<code>OSIntExit()</code> 将不会返回原先被中断的任务，而是调用 <strong>OSIntCtxSw()</strong> 切换至更高优先级的任务执行。(来源：课件第3章 P.3, P.9)</li>
+</ul>
+<hr>
+<h3 id="2-临界段的概念">2. 临界段的概念</h3>
+<ul>
+<li><strong>概念定义</strong>：在应用程序中，必须不受任何干扰地连续运行的代码段称为临界段。CPU 只有在中断开放期间才能响应中断请求。(来源：课件第3章 P.12)</li>
+<li><strong>实现方式</strong>：μC/OS-II 用 <strong>OS_ENTER_CRITICAL()</strong> 和 <strong>OS_EXIT_CRITICAL()</strong> 两个宏来实现中断的开放和关闭。共有三种实现方法：</li>
+</ul>
+<h4 id="临界段保护三种方法对比表">临界段保护三种方法对比表</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">选项方法</th><th align="left">实现方式与编译设置</th><th align="left">特点及潜在风险说明</th></tr></thead><tbody><tr><td align="left"><strong>方法 1</strong></td><td align="left">置 <code>OS_CRITICAL_METHOD == 1</code>；关中断 <code>asm("DI")</code>，开中断 <code>asm("EI")</code></td><td align="left">直接进行开闭中断，若进入临界段前中断本就是关闭状态，退出时会强行开启中断</td></tr><tr><td align="left"><strong>方法 2</strong></td><td align="left">置 <code>OS_CRITICAL_METHOD == 2</code>；进入时 <code>asm("PUSH PSW")</code>，退出时 <code>asm("POP PSW")</code></td><td align="left">通过压栈/出栈恢复中断允许标志，可维持进入临界段前的原有状态</td></tr><tr><td align="left"><strong>方法 3</strong></td><td align="left">置 <code>OS_CRITICAL_METHOD == 3</code>；进入时 <code>cpu_sr = get_processor_psw()</code>，退出时 <code>set_processor_psw(cpu_sr)</code></td><td align="left">将状态保存在局部变量 <code>cpu_sr</code> 中，需编译器支持特定汇编语句与寄存器读取</td></tr></tbody></table>
+<p><em>(来源：课件第3章 P.13, P.14, P.15)</em></p>
+<hr>
+<h3 id="3-时钟中断">3. 时钟中断</h3>
+<ul>
+<li><strong>节拍产生</strong>：时钟是任何系统处理时间相关事件（如延时）所必需的周期性信号源。系统采用硬件定时器产生毫秒级中断来实现时钟，最小时钟单位称为<strong>时钟节拍</strong>。(来源：课件第3章 P.16)</li>
+<li><strong>时钟服务函数 OSTimeTick() 的工作</strong>：
+<ol>
+<li>给时钟节拍计数器 <strong>OSTime</strong> 加 1。</li>
+<li>遍历所有非空闲任务的 TCB，将其内部的延时递减常数 <strong>OSTCBDly</strong> 减 1。</li>
+<li>若减至 0 且任务未被挂起，将其恢复为就绪态，并修改就绪表登记。(来源：课件第3章 P.16)</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="4-延时函数">4. 延时函数</h3>
+<ul>
+<li><strong>延时作用</strong>：主动调用延时可以让高优先级任务暂停运行并进行一次调度，防止其独占 CPU，让出使用权给其他就绪任务。(来源：课件第3章 P.20)</li>
+<li><strong>OSTimeDly() 延时实现原理</strong>：
+<ol>
+<li>判断延时节拍数大于 0 后，进入临界段。</li>
+<li>取消当前任务在就绪表中的就绪状态。</li>
+<li>将延时节拍数 <code>ticks</code> 写入当前任务控制块的 <code>OSTCBDly</code> 成员中。</li>
+<li>退出临界段，调用调度器 <code>OSSched()</code>。(来源：课件第3章 P.21)</li>
+</ol>
+</li>
+<li><strong>时分秒毫秒延时 OSTimeDlyHMSM()</strong>：提供时、分、秒、毫秒为单位的更具可读性的延时输入方式。(来源：课件第3章 P.20)</li>
+<li><strong>恢复延时 OSTimeDlyResume()</strong>：可手动使某个因延时而处于等待状态的任务取消延时，提前进入就绪态，若其优先级高于当前任务则立即引发调度。(来源：课件第3章 P.22)</li>
+</ul>
+<hr>
+<hr>
+<h2 id="第-4-章-任务的同步与通信">第 4 章 任务的同步与通信</h2>
+<h3 id="1-任务同步">1. 任务同步</h3>
+<ul>
+<li><strong>直接制约关系</strong>：源于任务之间相互合作，执行上具有先后次序。(来源：课件第4章 P.3)</li>
+<li><strong>间接制约关系</strong>：源于对共享资源的竞争，需要各任务间具有一种互斥关系。(来源：课件第4章 P.3)</li>
+<li><strong>同步定义</strong>：这种制约性的合作运行机制称为同步，系统中通过发送消息/信号来保证。(来源：课件第4章 P.3)</li>
+</ul>
+<hr>
+<h3 id="2-事件">2. 事件</h3>
+<ul>
+<li><strong>概念</strong>：在 μC/OS-II 中，使用信号量（计数器）、互斥信号量（二值）、邮箱（消息邮箱）和消息队列这些被称为事件的中间环节来实现任务间的同步与通信。(来源：课件第4章 P.4)</li>
+</ul>
+<hr>
+<h3 id="3-事件控制块-ecb">3. 事件控制块 (ECB)</h3>
+<ul>
+<li>
+<p><strong>核心结构体 OS_EVENT</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">typedef</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> struct</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT8U OSEventType;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                   // 事件类型</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT16U OSEventCnt;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                   // 信号量计数器</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">    void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OSEventPtr;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                    // 指向消息或消息队列的指针</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT8U OSEventGrp;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                    // 等待事件的任务组变量</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT8U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#C5E478">OSEventTbl</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">[OS_EVENT_TBL_SIZE];</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 等待事件的任务等待表</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">} OS_EVENT;</span></span></code></pre>
+<p><em>(来源：课件第4章 P.12)</em></p>
+</li>
+</ul>
+<h4 id="oseventtype-类型值可取范围表">OSEventType 类型值可取范围表</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">事件常数</th><th align="left">常数值说明</th></tr></thead><tbody><tr><td align="left"><strong>OS_EVENT_TYPE_SEM</strong></td><td align="left">表明事件是信号量</td></tr><tr><td align="left"><strong>OS_EVENT_TYPE_MUTEX</strong></td><td align="left">表明事件是互斥信号量</td></tr><tr><td align="left"><strong>OS_EVENT_TYPE_MBOX</strong></td><td align="left">表明事件是消息邮箱</td></tr><tr><td align="left"><strong>OS_EVENT_TYPE_Q</strong></td><td align="left">表明事件是消息队列</td></tr><tr><td align="left"><strong>OS_ENENT_TYPE_UNUSED</strong></td><td align="left">空事件控制块（未被使用的事件控制块）</td></tr></tbody></table>
+<p><em>(来源：课件第4章 P.14)</em></p>
+<ul>
+<li><strong>空事件控制块链表</strong>：在 <code>OSInit()</code> 初始化时由系统建立，数量为 <strong>OS_MAX_EVENTS</strong> 个，借用成员 <code>OSEventPtr</code> 将它们串联成一个单向空闲链表。(来源：课件第4章 P.23)</li>
+</ul>
+<hr>
+<h3 id="4-事件的操作创建发送请求以信号量为例">4. 事件的操作（创建、发送、请求）——以信号量为例</h3>
+<ul>
+<li>
+<p><strong>创建 OSSemCreate()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OS_EVENT </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSSemCreate</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(INT16U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">cnt</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>从空控制块链表中取出一个，将 <code>OSEventType</code> 置为 <code>OS_EVENT_TYPE_SEM</code>，<code>OSEventCnt</code> 赋予计数初值 <code>cnt</code>，并清空等待表。(来源：课件第4章 P.28, P.29)</li>
+</ul>
+</li>
+<li>
+<p><strong>请求 OSSemPend()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">void</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> OSSemPend</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_EVENT </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pevent</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT16U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">timeout</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>若计数器 <code>OSEventCnt > 0</code>，使其递减 1，任务继续运行。</li>
+<li>若计数器为 0，则将当前任务加入到该事件的等待表 <code>OSEventTbl</code> 中，置入等待状态，将等待时间 <code>timeout</code> 写入 TCB，然后执行调度。系统也提供了非堵塞查询获取函数 <code>OSSemAccept()</code>。(来源：课件第4章 P.31, P.32)</li>
+</ul>
+</li>
+<li>
+<p><strong>发送 OSSemPost()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">INT8U </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSSemPost</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_EVENT </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pevent</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>如果有任务在等待该信号量，唤醒其中优先级最高的一员，使其进入就绪表并调度；若无任务等待，则仅使计数器加 1。(来源：课件第4章 P.33)</li>
+</ul>
+</li>
+<li>
+<p><strong>删除 OSSemDel()</strong>：仅能在任务中删除信号量，无法在中断服务程序中执行。(来源：课件第4章 P.34)</p>
+</li>
+</ul>
+<hr>
+<h3 id="5-优先级反转">5. 优先级反转</h3>
+<ul>
+<li><strong>概念</strong>：在可剥夺型内核中，当某任务以独占方式共享资源时，因低优先级任务占有了该资源且被中等优先级任务打断抢占，导致请求该资源的最高优先级任务因得不到资源而长期处于挂起状态。最终结果表现为低、中优先级任务反常地先于高优先级任务运行。(来源：课件第4章 P.37)</li>
+<li><strong>解决方案</strong>：使用具有优先级继承特性的<strong>互斥型信号量</strong>（<strong>Mutex</strong>）。当高优先级任务请求已被低优先级任务占有的资源时，临时提升低优先级任务的优先级至最高等级，使其快速运行完并释放资源后，再恢复原本优先级。其 <code>OS_EVENT</code> 的 <code>OSEventCnt</code> 成员高 8 位用于存放防反转提起的优先级 <strong>prio</strong>，低 8 位存放可用标志（<code>0xFF</code>）。(来源：课件第4章 P.39, P.40)</li>
+</ul>
+<hr>
+<h3 id="6-相关例题例-8例-9">6. 相关例题（例 8、例 9）</h3>
+<ul>
+<li><strong>例 8（Slide 52）</strong>：定义任务 <code>MyTask</code> 和 <code>YouTask</code>。<code>MyTask</code> 内使用 <code>Times</code> 记录运行次数，将其指针作为消息发送至邮箱 <code>Str_Box</code>：<code>OSMboxPost(Str_Box, &#x26;Times)</code>。<code>YouTask</code> 调用 <code>OSMboxPend</code> 挂起接收，一旦获取此数据立即显示。</li>
+<li><strong>例 9（Slide 64~67）</strong>：定义消息队列指针数组 <code>Str_Q</code>。在 <code>StartTask</code> 中利用 <code>OSTimeGet()</code> 的取值判定当前节拍，满足条件后分别将消息 <code>s0</code>、<code>s100</code>、<code>s1</code>、<code>s500</code> 发送至队列。任务 <code>MyTask</code> 与 <code>YouTask</code> 并行挂起调用 <code>OSQPend</code> 竞争获取打印。</li>
+</ul>
+<hr>
+<hr>
+<h2 id="第-5-章-信号量集">第 5 章 信号量集</h2>
+<h3 id="1-信号量集">1. 信号量集</h3>
+<ul>
+<li>
+<p><strong>定义</strong>：又称事件标志组。任务可根据多个信号的组合状态（如多个事件同时发生或任意一个发生）进行同步。(来源：课件第5章 P.3)</p>
+</li>
+<li>
+<p><strong>信号量集标志组 (OS_FLAG_GRP)</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">typedef</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> struct</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT8U OSFlagType;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">        // 标志组标识</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">    void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OSFlagWaitList;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">    // 指向等待任务链表的双向节点头指针</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    OS_FLAGS OSFlagFlags;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">    // 事件标志状态值（16位）</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">} OS_FLAG_GRP;</span></span></code></pre>
+<p><em>(来源：课件第5章 P.5)</em></p>
+</li>
+<li>
+<p><strong>等待节点结构 (OS_FLAG_NODE)</strong>：用于组织正在等待信号量集的任务。其结构体包含双向节点指针、指向等待任务 TCB 的指针、信号过滤器（<strong>OSFlagNodeFlags</strong>）及逻辑运算关系（<strong>OSFlagNodeWaitType</strong>）。(来源：课件第5章 P.7, P.8)</p>
+</li>
+</ul>
+<h4 id="信号量集逻辑关系与常数对照表">信号量集逻辑关系与常数对照表</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">常用常数名</th><th align="left">信号有效状态（标志位）</th><th align="left">等待任务就绪条件说明</th></tr></thead><tbody><tr><td align="left"><strong>OS_FLAG_WAIT_CLR_ALL</strong></td><td align="left">0</td><td align="left">请求的所有标志位必须全为 0</td></tr><tr><td align="left"><strong>OS_FLAG_WAIT_CLR_ANY</strong></td><td align="left">0</td><td align="left">请求的标志位中，只要任意一个或一个以上为 0 即可</td></tr><tr><td align="left"><strong>OS_FLAG_WAIT_SET_ALL</strong></td><td align="left">1</td><td align="left">请求的所有标志位必须全为 1</td></tr><tr><td align="left"><strong>OS_FLAG_WAIT_SET_ANY</strong></td><td align="left">1</td><td align="left">请求的标志位中，只要任意一个或一个以上为 1 即可</td></tr></tbody></table>
+<p><em>(来源：课件第5章 P.9, P.15)</em></p>
+<hr>
+<h3 id="2-信号量集的操作创建请求和发送">2. 信号量集的操作（创建、请求和发送）</h3>
+<ul>
+<li>
+<p><strong>创建 OSFlagCreate()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OS_FLAG_GRP </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSFlagCreate</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_FLAGS </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">flags</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>从空标志组链表中申请节点，给 <code>OSFlagType</code> 填入标识，对当前状态标志值 <code>OSFlagFlags</code> 赋予初值，并将等待表头置为空指针。(来源：课件第5章 P.12)</li>
+</ul>
+</li>
+<li>
+<p><strong>请求 OSFlagPend()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OS_FLAGS </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSFlagPend</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_FLAG_GRP </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pgrp</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> OS_FLAGS </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">flags</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">wait_type</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT16U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">timeout</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>阻断或放行请求任务。如果不满足逻辑同步条件，则创建 <code>OS_FLAG_NODE</code> 节点并链入该信号量集的等待链表，引发调度。(来源：课件第5章 P.14)</li>
+</ul>
+</li>
+<li>
+<p><strong>发送 OSFlagPost()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OS_FLAGS </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSFlagPost</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_FLAG_GRP </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pgrp</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> OS_FLAGS </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">flags</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">opt</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>设置或清除 <code>flags</code> 所指定的位。<code>opt = OS_FLAG_SET</code> 为置 1 操作；<code>opt = OS_FLAG_CLR</code> 为置 0 操作。之后系统重新检索链表并唤醒满足就绪条件的所有任务。(来源：课件第5章 P.16)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-相关例题例-1例-3">3. 相关例题（例 1、例 3）</h3>
+<ul>
+<li><strong>例 1（Slide 18~21）</strong>：任务 <code>MyTask</code> 请求第 0 位和第 1 位标志必须同时为 1（<code>OS_FLAG_WAIT_SET_ALL</code>）。中等优先级的 <code>YouTask</code> 延时 8s 运行，将第 1 位置 1（值 2）。低优先级的 <code>HerTask</code> 每 1s 将第 0 位置 1（值 1）。当系统到达第 8s 时刻，YouTask 将第 1 位置 1，此时第 0 位和第 1 位标志皆为 1，<code>MyTask</code> 立即获得运行机会。</li>
+<li><strong>例 3（Slide 23）</strong>：通过分析黑板手绘的多任务状态转移逻辑，推算并验证在复杂的逻辑组合触发以及不同的任务延时配置下系统的优先级抢占时序。</li>
+</ul>
+<hr>
+<hr>
+<h2 id="第-6-章-内存的动态分配">第 6 章 内存的动态分配</h2>
+<h3 id="1-内存的管理">1. 内存的管理</h3>
+<ul>
+<li><strong>二级管理机制</strong>：为了克服在嵌入式系统中使用 C 标准 <code>malloc</code> 函数产生大量内存碎片及分配时间不确定的弊端，系统将一大片连续的内存空间划分为若干个<strong>分区</strong>，每个分区又划分成若干个大小相等的<strong>内存块</strong>进行管理。(来源：课件第6章 P.2)</li>
+<li><strong>分配准则</strong>：系统以分区为单位进行动态内存初始化，用户任务则以内存块为单位索取和释放动态内存。(来源：课件第6章 P.2)</li>
+</ul>
+<hr>
+<h3 id="2-内存分区的组织">2. 内存分区的组织</h3>
+<ul>
+<li>
+<p><strong>组织结构</strong>：同一个分区内所有未被申请的空闲内存块，通过<strong>单向链表</strong>连接在一起，块内存储下一块的首地址。(来源：课件第6章 P.4)</p>
+</li>
+<li>
+<p><strong>内存控制块 (OS_MEM) 成员</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">typedef</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> struct</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> {</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">    void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OSMemAddr;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">     // 内存分区的起始地址</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">    void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OSMemFreeList;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 指向下一个空闲块单链表表头的指针</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT32U OSMemBlkSize;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic"> // 块长度</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT32U OSMemBlks;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">    // 块总数</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    INT32U OSMemNFree;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">   // 分区中目前可分配的空闲块数</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">} OS_MEM;</span></span></code></pre>
+<p><em>(来源：课件第6章 P.5)</em></p>
+</li>
+<li>
+<p><strong>控制块初始化</strong>：系统在初始化阶段调用 <code>OS_MemInit()</code> 创建包含 <strong>OS_MAX_MEM_PART</strong> 个空闲内存控制块单链表。(来源：课件第6章 P.6)</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-动态内存的管理创建请求释放">3. 动态内存的管理（创建、请求、释放）</h3>
+<ul>
+<li>
+<p><strong>创建内存分区 OSMemCreate()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">OS_MEM </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSMemCreate</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">addr</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT32U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">nblks</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT32U </span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">blksize</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li><strong>创建条件限制</strong>：分区内部包含的块数必须多于 1 个（<code>nblks > 1</code>），且每个块的大小必须能至少存放一个指针（<code>blksize >= sizeof(void *)</code>）。(来源：课件第6章 P.8, P.9)</li>
+</ul>
+</li>
+<li>
+<p><strong>请求内存块 OSMemGet()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSMemGet</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_MEM </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pmem</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> INT8U </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">err</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>从指定的内存分区获取一内存块，若无空闲块返回空指针。(来源：课件第6章 P.11, P.12)</li>
+</ul>
+</li>
+<li>
+<p><strong>释放内存块 OSMemPut()</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">INT8U </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">OSMemPut</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">(OS_MEM </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">*</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pmem</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> void</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA"> *</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D7DBE0">pblk</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">);</span></span></code></pre>
+<ul>
+<li>任务使用完缓冲区后将其归还到其所属的内存分区中，计数器递增。(来源：课件第6章 P.14)</li>
+</ul>
+</li>
+<li>
+<p><strong>例 1 与例 2 详述</strong>：</p>
+<ul>
+<li><strong>例 1（分区的定义与声明，Slide 10）</strong>：定义 <code>INT8U CommTxPart[50][64]</code> 划分 50 个 64 字节块。主函数调用 <code>CommTxBuffer = OSMemCreate(CommTxPart, 50, 64, &#x26;err)</code> 完成关联和初始化。</li>
+<li><strong>例 2（获取，Slide 13）</strong>：定义 <code>INT8U *BlkPtr</code> 接收申请。在任务循环中调用 <code>BlkPtr = OSMemGet(CommTxBuffer, &#x26;err)</code>，写入数据，使用完毕后调用 <code>OSMemPut(CommTxBuffer, BlkPtr)</code> 进行释放归还。</li>
+</ul>
+</li>
+</ul> </article> <hr class="my-8 border-dashed"> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded/嵌入式系统设计与应用-2026sp-重点.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/hez-notes/tags/嵌入式操作系统/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 嵌入式操作系统 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&amp;body=https://hez2z.github.io/hez-notes/posts/embedded/%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-2026sp-%E9%87%8D%E7%82%B9/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/hez-notes/posts/embedded/嵌入式操作系统-2025sp-回忆版" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <div> <span>上一篇</span> <div class="text-sm text-accent/85">嵌入式操作系统-2025sp-回忆版</div> </div> </a> <a href="/hez-notes/posts/embedded/嵌入式操作系统-2026sp-作业" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">嵌入式操作系统-2026sp-作业</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/hez-notes/_astro/PostDetails.astro_astro_type_script_index_0_lang.VTu63WyA.js"></script>

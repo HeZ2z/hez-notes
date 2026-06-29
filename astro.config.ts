@@ -11,11 +11,15 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import remarkAssetBasePath from "./src/utils/remark-asset-base-path.mjs";
+import remarkFixHexoTabs from "./src/utils/remark-fix-hexo-tabs.mjs";
 import { SITE } from "./src/config";
+
+const BASE_PATH = "/hez-notes";
 
 export default defineConfig({
   site: SITE.website,
-  base: "/hez-notes",
+  base: BASE_PATH,
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
@@ -26,6 +30,8 @@ export default defineConfig({
       remarkMath,
       remarkToc,
       [remarkCollapse, { test: "Table of contents" }],
+      [remarkAssetBasePath, BASE_PATH],
+      remarkFixHexoTabs,
     ],
     rehypePlugins: [[rehypeKatex, { strict: false }]],
     shikiConfig: {

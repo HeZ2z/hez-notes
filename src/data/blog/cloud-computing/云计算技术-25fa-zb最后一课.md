@@ -7,6 +7,7 @@ tags:
   - "云计算技术"
 description: "好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛"
 ---
+
 好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛
 
 > 本文连载于[云计算技术-25fa-zb最后一课| HeZzz](https://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/)
@@ -51,8 +52,6 @@ description: "好吧，我是把那个考试点给你说一下吧。其实就那
 MapReduce 还有 Combiner 的,Reducer(？没听清) 的一些概念，
 
 可以看
-
-{% post_link 云计算技术-25fa-zb最后一课-MapReduce ' 云计算技术 -25fa-zb 最后一课 - MapReduce ' %}
 
 和
 

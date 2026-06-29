@@ -8,6 +8,7 @@ tags:
   - "语法"
 description: "Java 语言及网络编程疑似 2024 秋季学期作业及参考答案整理。"
 ---
+
 > Java 语言及网络编程疑似 2024 年秋季学期的作业及其参考答案，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
 >
 > 本文连载于[Java语言-2025fa-yy重点 - HeZzz](https://hez2z.github.io/2025/11/04/Java%E8%AF%AD%E8%A8%80-2025fa-yy%E9%87%8D%E7%82%B9/).
@@ -22,7 +23,7 @@ description: "Java 语言及网络编程疑似 2024 秋季学期作业及参考�
 
 > Q: 利用 `Scanner` 输入正整数 n, 计算多项式 1！+2！+3！… + n!，如果多项式之和超过 2000 时需中止后续项的相加操作，并输出累加之和以及停止时累加项（a!）的a值。
 >
-> 输出格式参考：System.out.printf("the sum  is %d, and the last item is %d",sum,i)
+> 输出格式参考：System.out.printf("the sum is %d, and the last item is %d",sum,i)
 
 ```Java
 import java.util.Scanner;
@@ -31,25 +32,25 @@ public class Chapter32 {
     public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        
+
         int i = 1;
         int sum = 0;
         int factorial = 1; // 用于累积阶乘值
         int lastItem = 0;  // 记录最后一项的索引
-        
+
         while (i <= n) {
             factorial *= i; // 计算 i!
             sum += factorial;
             lastItem = i;   // 更新最后一项为当前 i
-            
+
             // 检查是否超过 2000（严格大于）
             if (sum > 2000) {
                 break;
             }
-            
+
             i++; // 准备下一项
         }
-        
+
         System.out.printf("the sum  is %d, and the last item is %d", sum, lastItem);
         sc.close();
     }
@@ -66,26 +67,26 @@ import java.util.Scanner;
 public class Chapter33 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        
+
         // 校验正整数输入
         if (num1 <= 0 || num2 <= 0) {
             System.out.println("Error: Input must be positive integers.");
             scanner.close();
             return;
         }
-        
+
         int gcd = gcdIterative(num1, num2);
         System.out.printf("The GCD is %d%n", gcd);
-        
+
         scanner.close();
     }
 
     /**
      * 迭代版欧几里得算法
-     * 
+     *
      * @param a 第一个正整数
      * @param b 第二个正整数
      * @return 两个正整数的最大公约数
@@ -122,7 +123,7 @@ public class Chapter36 {
     public static void main(String arg[]) {
         Scanner scanner = new Scanner(System.in);
         char c = scanner.next().charAt(0);
-        
+
         // 使用字符常量判断
         if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
             System.out.println(c + "是西文字符");
@@ -131,7 +132,7 @@ public class Chapter36 {
         } else {
             System.out.println(c + "是其他字符");
         }
-        
+
         scanner.close();
     }
 }
@@ -141,9 +142,9 @@ public class Chapter36 {
 
 > 建立数组 `arr`，并通过标准输入端输入 n 个数据，而且只有一个数出现奇数次，其他的都出现偶数次，请用异或运算找出这个奇数次出现的数（注意，输入数组长度 n ,和数组数据中间要加一个换行）
 >
-> **用例1** 输入: `5`  `2 3 6 3 2` 输出: `奇数次出现的数为：6`
+> **用例1** 输入: `5` `2 3 6 3 2` 输出: `奇数次出现的数为：6`
 >
-> **用例2** 输入: `7`  `3 3 3 3 4 4 5` 输出: `奇数次出现的数为：5`
+> **用例2** 输入: `7` `3 3 3 3 4 4 5` 输出: `奇数次出现的数为：5`
 
 ```Java
 import java.util.Scanner;
@@ -151,27 +152,27 @@ import java.util.Scanner;
 public class Chapter38 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         // 1. 严格分两行读取：第一行n，第二行数组
         int n = scanner.nextInt();
         scanner.nextLine(); // 关键：消耗换行符
-        
+
         int result = 0;
         int count = 0;
-        
+
         // 2. 只读取n个有效整数
         while (count < n && scanner.hasNextInt()) {
             int num = scanner.nextInt();
             result ^= num;
             count++;
         }
-        
+
         // 3. 验证是否读取足够数据
         if (count < n) {
             System.out.println("Error: Insufficient input numbers");
             return;
         }
-        
+
         System.out.println("奇数次出现的数为：" + result);
         scanner.close();
     }
@@ -193,12 +194,12 @@ public class sub extends sup{
 
 public static void main(String arg[]){
     sub sb1=new sub();
-    sup sp1=new sub(); 
+    sup sp1=new sub();
     sup sp2=new sup();
 
-    System.out.println("sp1 instanceof sub: "+(sp1 instanceof sub)); 
+    System.out.println("sp1 instanceof sub: "+(sp1 instanceof sub));
     System.out.println("sp2 instanceof sub: "+(sp2 instanceof sub));}
-} 
+}
 ```
 
 答案：
@@ -215,27 +216,27 @@ sp2 instanceof sub: false
 ```Java
 //该类不符合设计原则，但可以用来考察多态
 class A {
-    public String Show(D obj) { 
+    public String Show(D obj) {
         return ("A and D"); }
-    public String Show(A obj) { 
+    public String Show(A obj) {
         return ("A and A"); }
 }
 class B extends A {
-    public String Show(B obj) { 
+    public String Show(B obj) {
             return ("B and B"); }
-    public String Show(A obj) { 
+    public String Show(A obj) {
             return ("B and A"); }
 }
 class C extends B {
-    public String Show(C obj) { 
+    public String Show(C obj) {
             return ("C and C"); }
-    public String Show(B obj) { 
+    public String Show(B obj) {
             return ("C and B"); }
 }
 class D extends B {
-    public String Show(D obj) { 
+    public String Show(D obj) {
             return ("D and D"); }
-    public String Show(B obj) { 
+    public String Show(B obj) {
             return ("D and B"); }
 }
  public class mainTest {
@@ -245,16 +246,16 @@ class D extends B {
                 B b = new B();
                 C c = new C();
                 D d = new D();
-                
-                System.out.println(a1.Show(b));     
-                System.out.println(a1.Show(c)); 
-                System.out.println(a1.Show(d)); 
-                System.out.println(a2.Show(b)); 
-                System.out.println(a2.Show(c)); 
+
+                System.out.println(a1.Show(b));
+                System.out.println(a1.Show(c));
+                System.out.println(a1.Show(d));
+                System.out.println(a2.Show(b));
+                System.out.println(a2.Show(c));
                 System.out.println(a2.Show(d));
-                System.out.println(b.Show(b)); 
+                System.out.println(b.Show(b));
                 System.out.println(b.Show(c));
-                System.out.println(b.Show(d)); 
+                System.out.println(b.Show(d));
             }
     }
 ```
@@ -294,7 +295,7 @@ class Son extends Father {
     public void Show(Father obj) {
         System.out.println("in Son.show-Father");
     }
-    
+
     public void Show(GrandSon obj) {
         System.out.println("in Son.show-GrandSon");
     }
@@ -400,7 +401,6 @@ Dervied tell name: dervied
 > 方法包括构造方法， `compare` 方法（比较两个学生的总成绩，也可以比较两人的单科成绩，`compare` 方法需要传入待比较的学生，和待比较的类型，比如是某个具体的单科，或者是总成绩）。
 >
 > 1. 在主方法中定义一个 `Student` 数组，生成对象存入其中。
->
 > 2. 找出总成绩最高的学生，再找出数学成绩最低的学生
 >
 > 和这个可能很像:[Java 语言 - 2023fa - 回忆版 #编程题 2：学生管理系统 | HeZzz](https://hez2z.github.io/2025/11/05/Java%E8%AF%AD%E8%A8%80-2023fa-%E5%9B%9E%E5%BF%86%E7%89%88/#%E7%BC%96%E7%A8%8B%E9%A2%98-2%EF%BC%9A%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F)
@@ -429,7 +429,7 @@ class Student {
     public int compare(Student other, String type) {
         switch (type) {
             case "total":
-                return (this.english + this.math + this.computer) 
+                return (this.english + this.math + this.computer)
                      - (other.english + other.math + other.computer);
             case "english":
                 return this.english - other.english;
@@ -480,7 +480,7 @@ public class StudentManager {
         // 输出结果
         System.out.println("总成绩最高的学生: " + highestTotal.getName());
         System.out.println("数学成绩最低的学生: " + lowestMath.getName());
-    
+
     }
 }
 ```

@@ -23,7 +23,9 @@ export function getPath(
 
   let basePath: string;
   if (typeof includeBase === "string") {
-    basePath = includeBase.endsWith("/") ? includeBase.slice(0, -1) : includeBase;
+    basePath = includeBase.endsWith("/")
+      ? includeBase.slice(0, -1)
+      : includeBase;
     basePath = `${basePath}/posts`;
   } else {
     basePath = includeBase ? "/posts" : "";

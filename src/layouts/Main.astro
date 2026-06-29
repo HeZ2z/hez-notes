@@ -5,7 +5,10 @@ import { normalizeBackUrl } from "@/utils/backUrl";
 type StringTitle = { pageTitle: string };
 type ArrayTitle = { pageTitle: [string, string]; titleTransition: string };
 
-type Props = (StringTitle | ArrayTitle) & { pageDesc?: string; backUrl?: string };
+type Props = (StringTitle | ArrayTitle) & {
+  pageDesc?: string;
+  backUrl?: string;
+};
 
 const { props } = Astro;
 

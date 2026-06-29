@@ -8,6 +8,7 @@ tags:
   - "语法"
 description: "Java 语言及网络编程 2025 秋季学期的重点整理。"
 ---
+
 > Java 语言及网络编程 2025 秋季学期 的重点，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
 >
 > 本文连载于[Java语言-2025fa-yy重点 - HeZzz](https://hez2z.github.io/2025/11/04/Java%E8%AF%AD%E8%A8%80-2025fa-yy%E9%87%8D%E7%82%B9/).
@@ -178,8 +179,8 @@ try {
 
 事件监听器 （很重要！大概率会考） ，提了 ActionListener 接口里面的 actionPerformed 方法。
 
-{% tabs java-yy-1 %}
-<!--tab Jbutton-->
+#### Jbutton
+
 ```Java
 JButton button = new JButton("Click Me");
 button.setBounds(50, 100, 95, 30);
@@ -196,17 +197,16 @@ frame.setLayout(null);
 frame.setVisible(true);
 ```
 
-<!--endtab-->
+#### Jframe
 
-<!--tab Jframe-->
 ```Java
 JFrame frame = new JFrame("My Frame");
 frame.setSize(400, 400);
 frame.setVisible(true);
 ```
-<!--endtab-->
 
-<!--tab JTextfield-->
+#### JTextfield
+
 ```Java
 JTextField textField = new JTextField();
 textField.setBounds(50, 50, 150, 20);
@@ -220,15 +220,13 @@ textField.addActionListener(new ActionListener() {
     }
 });
 ```
-<!--endtab-->
 
-<!--tab JLabel-->
+#### JLabel
+
 ```Java
 JLabel label = new JLabel("Hello, World!");
 label.setBounds(50, 20, 100, 30);
 ```
-<!--endtab-->
-{% endtabs %}
 
 > 什么清朝老东西
 
@@ -254,8 +252,8 @@ label.setBounds(50, 20, 100, 30);
 - 实现 Runnable 接口
 - 实现 Callable 接口
 
-{% tabs java-yy-2 %}
-<!--tab 继承 Thread 类-->
+#### 继承 Thread 类
+
 ```Java
 class CookingTask extends Thread {
     private String task;
@@ -284,9 +282,9 @@ public class Restaurant {
     }
 }
 ```
-<!--endtab-->
 
-<!--tab 实现 Runnable 接口-->
+#### 实现 Runnable 接口
+
 ```Java
 class CookingJob implements Runnable {
     private String task;
@@ -313,9 +311,9 @@ public class RestaurantRunnable {
     }
 }
 ```
-<!--endtab-->
 
-<!--tab 实现 Callable 接口-->
+#### 实现 Callable 接口
+
 ```Java
 class CookingCallable implements Callable<String> {
     private String task;
@@ -325,7 +323,7 @@ class CookingCallable implements Callable<String> {
     }
 
     public String call() throws Exception {
-        return task + " is being prepared by " + 
+        return task + " is being prepared by " +
             Thread.currentThread().getName();
     }
 }
@@ -335,31 +333,29 @@ public class RestaurantCallable {
         // 方法1：使用FutureTask
         FutureTask<String> futureTask1 = new FutureTask<>(new CookingCallable("Steak")); [[1]]
         FutureTask<String> futureTask2 = new FutureTask<>(new CookingCallable("Fish"));
-        
+
         Thread t1 = new Thread(futureTask1);
         Thread t2 = new Thread(futureTask2);
-        
+
         t1.start();
         t2.start();
-        
+
         // 获取结果
         System.out.println(futureTask1.get());
         System.out.println(futureTask2.get());
-        
+
         // 方法2：使用ExecutorService（更常用）
         ExecutorService executor = Executors.newFixedThreadPool(2); [[1]]
         Future<String> future1 = executor.submit(new CookingCallable("Chicken"));
         Future<String> future2 = executor.submit(new CookingCallable("Vegetables"));
-        
+
         System.out.println(future1.get());
         System.out.println(future2.get());
-        
+
         executor.shutdown();
     }
 }
 ```
-<!--endtab-->
-{% endtabs %}
 
 > Java 25 中完善了虚拟线程（Virtual Threads），但考试范围内不涉及该内容。若有兴趣，可自行了解相关资料。
 

@@ -8,6 +8,7 @@ tags:
   - "作业"
 description: "算法导论 2025 秋季学期 rxb 作业题整理。"
 ---
+
 此为 rxb 的算法导论作业。
 
 ## 跳台阶 递归/DP
@@ -19,8 +20,7 @@ description: "算法导论 2025 秋季学期 rxb 作业题整理。"
 
 此外，请写出$n=8$时的详细计算过程。
 
-{% tabs 1 %}
-<!-- tab 递归_1-->
+#### 递归\_1
 
 详细思路：
 
@@ -53,8 +53,8 @@ def frog_jump_recursive(n) -> int:
 | $f(k - 3)$ | /   | /   | /   | 1   | 1   | 1   | 2   | 3   | 4   |
 | $f(k)$     | 1   | 1   | 1   | 2   | 3   | 4   | 6   | 9   | 13  |
 
-<!-- endtab-->
-<!-- tab DP_1-->
+#### DP_1
+
 详细思路：
 
 1. 定义一个数组`dp`，其中`dp[i]`表示跳上i级台阶的跳法总数。
@@ -74,10 +74,10 @@ def frog_jump_dp(n) -> int:
         dp[1] = 1  # 1级台阶有1种跳法（跳1级）
     if n >= 2:
         dp[2] = 1  # 2级台阶有1种跳法（跳1级+1级）
-    
+
     for i in range(3, n + 1):
         dp[i] = dp[i - 1] + dp[i - 3] # 转移方程
-    
+
     return dp[n]
 ```
 
@@ -88,9 +88,6 @@ def frog_jump_dp(n) -> int:
 | $dp[k - 1]$ | /   | 1   | 1   | 1   | 2   | 3   | 4   | 6   | 9   |
 | $dp[k - 3]$ | /   | /   | /   | 1   | 1   | 1   | 2   | 3   | 4   |
 | $dp[k]$     | 1   | 1   | 1   | 2   | 3   | 4   | 6   | 9   | 13  |
-
-<!-- endtab-->
-{% endtabs %}
 
 ## 节点组合得分 DP
 
@@ -113,17 +110,17 @@ def frog_jump_dp(n) -> int:
 def MaxCombinationScore(a) -> int:
     max_prev = a[0] + 0    // 初始化第一个节点的 a[i] + i
     max_score = -infinity  // 记录全局最高得分
-    
+
     for j in range(1, len(a)):
         // 1. 计算以当前 j 结尾的最佳组合得分
         current_score = max_prev + a[j] - j
-        
+
         // 2. 更新全局最大值
         max_score = max(max_score, current_score)
-        
+
         // 3. 更新 max_prev，为下一个 j 做准备
         max_prev = max(max_prev, a[j] + j)
-        
+
     return max_score
 ```
 
@@ -139,8 +136,8 @@ Kal'tsit（先手）和 Nahida（后手）（正好俩人都是绿的，还都�
 
 此外，请写出扑克牌为$\{7, 3, 10, 13, 6, 9, 2\}$时的详细计算过程。
 
-{% tabs 3 %}
-<!-- tab DP_3-->
+#### DP_3
+
 详细思路：
 
 1. 定义一个二维数组`dp`，其中`dp[i][j]`表示在剩余牌为$a[i]$到$a[j]$时，当前玩家能获得的最大得分。
@@ -203,8 +200,8 @@ na:
 | 9   | 0   | 2   |     |     |     |     |     |
 | 2   | 0   |     |     |     |     |     |     |
 
-<!-- endtab-->
-<!-- tab 回溯_3-->
+#### 回溯\_3
+
 详细思路：
 
 1. 首先根结点表示当前剩余的牌为$a[i]$到$a[j]$，以及当前玩家的得分。
@@ -223,8 +220,6 @@ graph TD
     B --> D["对手回合 a[i+1]...a[j]"]
     C --> E["对手回合 a[i]...a[j-1]"]
 ```
-<!-- endtab-->
-{% endtabs %}
 
 ## 保龄球游戏 DP
 

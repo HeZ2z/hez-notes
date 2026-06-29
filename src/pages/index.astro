@@ -42,7 +42,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <p>欢迎来到 HeZzz 的笔记站点！</p>
-      <p>这里汇总课程回忆版、期末重点、作业整理与常用复习资料等，欢迎在 Github 上查看更多内容。</p>
+      <p>
+        这里汇总课程回忆版、期末重点、作业整理与常用复习资料等，欢迎在 Github
+        上查看更多内容。
+      </p>
       <p>初次到来请查看右上角关于页面了解站点信息。</p>
       {
         SOCIALS.length > 0 && (
@@ -104,7 +107,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset?.layout;
     if (indexLayout) {
-      setBackUrl(normalizeBackUrl(window.location.pathname, window.location.search));
+      setBackUrl(
+        normalizeBackUrl(window.location.pathname, window.location.search)
+      );
     }
   });
 </script>

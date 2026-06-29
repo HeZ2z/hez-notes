@@ -15,7 +15,13 @@ const backUrl = SITE.showBackButton
 <Layout title={`搜索 | ${SITE.title}`}>
   <Header />
   <Main pageTitle="搜索" pageDesc="搜索课程名、关键词或资料标题。" {backUrl}>
-    <div id="pagefind-search" transition:persist data-backurl={backUrl} data-base-path={BASE_PATH}></div>
+    <div
+      id="pagefind-search"
+      transition:persist
+      data-backurl={backUrl}
+      data-base-path={BASE_PATH}
+    >
+    </div>
   </Main>
   <Footer />
 </Layout>

@@ -8,6 +8,7 @@ tags:
   - "语法"
 description: "Java 语言及网络编程 2023 秋季学期的回忆版真题整理。"
 ---
+
 > Java 语言及网络编程 2023 秋季学期 的回忆版真题，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
 >
 > 本文连载于[Java语言-2023fa-回忆版 | HeZzz](https://hez2z.github.io/2025/11/05/Java%E8%AF%AD%E8%A8%80-2023fa-%E5%9B%9E%E5%BF%86%E7%89%88).
@@ -40,11 +41,11 @@ description: "Java 语言及网络编程 2023 秋季学期的回忆版真题整�
 // static 示例
 class StaticExample {
     static int staticVar = 0;
-    
+
     static {
         System.out.println("静态代码块执行");
     }
-    
+
     static void staticMethod() {
         System.out.println("静态方法");
     }
@@ -53,7 +54,7 @@ class StaticExample {
 // final 示例
 final class FinalClass {
     final int finalVar = 10;
-    
+
     final void finalMethod() {
         // final 方法
     }
@@ -195,11 +196,11 @@ statement4;
 
 2. 如果异常未被捕获，`statement4` 会执行吗？
 
-    不会执行。如果 `try` 中或随后的调用链抛出的异常没有被本方法内的任何 `catch` 捕获，异常会向外抛出，当前方法的正常控制流被中断，随后语句（包括 `statement4`）不会执行，直到异常被上层调用者捕获或程序终止。
+   不会执行。如果 `try` 中或随后的调用链抛出的异常没有被本方法内的任何 `catch` 捕获，异常会向外抛出，当前方法的正常控制流被中断，随后语句（包括 `statement4`）不会执行，直到异常被上层调用者捕获或程序终止。
 
 3. 如果 `catch` 中捕获了异常，`statement4` 会执行吗？
 
-    会执行。若异常在某个 `catch` 块中被捕获并且该 `catch` 块正常完成（没有再次抛出异常），控制流会继续到 `try-catch` 之后，执行 `statement4`。
+   会执行。若异常在某个 `catch` 块中被捕获并且该 `catch` 块正常完成（没有再次抛出异常），控制流会继续到 `try-catch` 之后，执行 `statement4`。
 
 ---
 
@@ -241,7 +242,7 @@ public class UseFileIO {
 
 代码：`MouseEventDemo.java`
 
-> *省略 import 语句，可通过 IDE 自动导入！*
+> _省略 import 语句，可通过 IDE 自动导入！_
 
 ```Java
 //既是事件源又是监听器
@@ -301,7 +302,7 @@ import java.util.Random;
 
 class BankAccount {
     private int balance = 1000; // 初始余额设为1000，以便取款
-    
+
     // 同步取款方法
     public synchronized void withdraw(int amount, String threadName) {
         if (balance >= amount) {
@@ -316,16 +317,16 @@ class BankAccount {
 class WithdrawTask implements Runnable {
     private final BankAccount account;
     private final String threadName;
-    
+
     public WithdrawTask(BankAccount account, String threadName) {
         this.account = account;
         this.threadName = threadName;
     }
-    
+
     @Override
     public void run() {
         Random random = new Random();
-        
+
         for (int i = 0; i < 5; i++) { // 每个线程取钱5次
             int amount = random.nextInt(300) + 100; // 随机金额[100, 400]
             account.withdraw(amount, threadName);
@@ -341,15 +342,15 @@ class WithdrawTask implements Runnable {
 public class BankSystem {
     public static void main(String[] args) {
         BankAccount account = new BankAccount(); // 创建银行账户
-        
+
         // 创建两个取钱线程
         Thread t1 = new Thread(new WithdrawTask(account, "张三"), "线程1");
         Thread t2 = new Thread(new WithdrawTask(account, "李四"), "线程2");
-        
+
         // 启动线程
         t1.start();
         t2.start();
-        
+
         try {
             t1.join();
             t2.join();
@@ -375,26 +376,26 @@ class Student {
     String name;  // 姓名
     int id;       // 学号
     int score;    // 成绩
-    
+
     public Student(String name, int id, int score) {
         this.name = name;
         this.id = id;
         this.score = score;
     }
-    
+
     public int getScore() {
         return score;
     }
-    
+
     public int getId() {
         return id;
     }
-    
+
     @Override
     public String toString() {
         return "姓名:" + name + ", 学号:" + id + ", 成绩:" + score;
     }
-    
+
     // 重写equals方法，用于按学号删除
     @Override
     public boolean equals(Object obj) {
@@ -408,40 +409,40 @@ class Student {
 public class StudentManagementSystem {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
-        
+
         // 添加学生
         students.add(new Student("Alice", 1001, 85));
         students.add(new Student("Bob", 1002, 92));
         students.add(new Student("Charlie", 1003, 78));
         students.add(new Student("David", 1004, 88));
-        
+
         System.out.println("=== 初始学生列表 ===");
         traverseStudents(students);
-        
+
         // 查询操作
         System.out.println("\n=== 查询操作 ===");
         queryStudent(students, "Bob");
         queryStudent(students, "Eve");
-        
+
         // 删除操作
         System.out.println("\n=== 删除操作 ===");
         deleteStudent(students, 1003);
         deleteStudent(students, 1005);
-        
+
         System.out.println("\n=== 删除后的学生列表 ===");
         traverseStudents(students);
-        
+
         // 使用Collections排序
         System.out.println("\n=== 使用Collections按成绩排序 ===");
         Collections.sort(students, Comparator.comparingInt(Student::getScore));
         traverseStudents(students);
-        
+
         // 按学号排序
         System.out.println("\n=== 按学号排序 ===");
         Collections.sort(students, Comparator.comparingInt(Student::getId));
         traverseStudents(students);
     }
-    
+
     // 遍历操作
     public static void traverseStudents(ArrayList<Student> students) {
         System.out.println("遍历所有学生:");
@@ -449,7 +450,7 @@ public class StudentManagementSystem {
             System.out.println(student);
         }
     }
-    
+
     // 查询操作
     public static void queryStudent(ArrayList<Student> students, String name) {
         System.out.println("查询姓名为 " + name + " 的学生:");
@@ -465,7 +466,7 @@ public class StudentManagementSystem {
             System.out.println("未找到姓名为 " + name + " 的学生");
         }
     }
-    
+
     // 删除操作
     public static void deleteStudent(ArrayList<Student> students, int id) {
         System.out.println("尝试删除学号为 " + id + " 的学生:");
@@ -476,7 +477,7 @@ public class StudentManagementSystem {
                 break;
             }
         }
-        
+
         if (toRemove != null && students.remove(toRemove)) {
             System.out.println("删除成功: " + toRemove);
         } else {

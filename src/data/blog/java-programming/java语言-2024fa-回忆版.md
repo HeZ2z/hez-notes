@@ -8,6 +8,7 @@ tags:
   - "语法"
 description: "Java 语言及网络编程 2024 秋季学期的回忆版真题整理。"
 ---
+
 > Java 语言及网络编程 2024 秋季学期 的回忆版真题，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
 >
 > 本文连载于[Java语言-2024fa-回忆版 | HeZzz](https://hez2z.github.io/2025/11/06/Java%E8%AF%AD%E8%A8%80-2024fa-%E5%9B%9E%E5%BF%86%E7%89%88).
@@ -36,39 +37,39 @@ description: "Java 语言及网络编程 2024 秋季学期的回忆版真题整�
 
 1. 继承 Thread 类并重写 run() 方法。
 
-    ```Java
-    class MyThread extends Thread {
-        @Override
-        public void run() {
-            System.out.println("线程运行中");
-        }
-    }
-    ```
+   ```Java
+   class MyThread extends Thread {
+       @Override
+       public void run() {
+           System.out.println("线程运行中");
+       }
+   }
+   ```
 
 2. 实现 Runnable 接口并实现 run() 方法。
 
-    ```Java
-    class MyRunnable implements Runnable {
-        @Override
-        public void run() {
-            System.out.println("线程运行中");
-        }
-    }
-    ```
+   ```Java
+   class MyRunnable implements Runnable {
+       @Override
+       public void run() {
+           System.out.println("线程运行中");
+       }
+   }
+   ```
 
 3. 实现 Callable 接口。
 
-    ```Java
-    import java.util.concurrent.Callable;
+   ```Java
+   import java.util.concurrent.Callable;
 
-    class MyCallable implements Callable<Integer> {
-        @Override
-        public Integer call() throws Exception {
-            System.out.println("线程运行中");
-            return 42;
-        }
-    }
-    ```
+   class MyCallable implements Callable<Integer> {
+       @Override
+       public Integer call() throws Exception {
+           System.out.println("线程运行中");
+           return 42;
+       }
+   }
+   ```
 
 ### 方法重载和重写的区别
 
@@ -114,7 +115,7 @@ class Dog extends Animal {
 
 - **方法重载**：在编译阶段由编译器根据方法调用时的参数类型和数量决定调用哪个方法。
 - **方法重写**：在运行时由JVM根据对象的实际类型（而非引用类型）决定调用哪个方法，实现多态性。
-这两种机制都是Java多态的重要体现，重载提高了代码的灵活性和可读性，重写则支持了面向对象的继承和多态特性。
+  这两种机制都是Java多态的重要体现，重载提高了代码的灵活性和可读性，重写则支持了面向对象的继承和多态特性。
 
 ### 抽象类，接口区别
 
@@ -146,17 +147,17 @@ class Dog extends Animal {
 // 抽象类Shape，作为其他形状类的基类
 abstract class Shape {
     String objectName = " "; // 成员变量
-    
+
     // 构造器
     Shape(String name) {
         this.objectName = name;
     }
-    
+
     // 具体方法（有实现）
     public void moveTo(int x, int y) {
         System.out.println(this.objectName + " has been moved to x = " + x + " and y = " + y);
     }
-    
+
     // 抽象方法（无实现）
     abstract public double area();
     abstract public void draw();
@@ -165,18 +166,18 @@ abstract class Shape {
 // 具体子类继承抽象类
 class Rectangle extends Shape {
     int length, width;
-    
+
     Rectangle(int length, int width, String name) {
         super(name); // 调用父类构造器
         this.length = length;
         this.width = width;
     }
-    
+
     @Override
     public void draw() {
         System.out.println("Rectangle has been drawn");
     }
-    
+
     @Override
     public double area() {
         return (double)(length * width);
@@ -194,7 +195,7 @@ interface Drawable {
 
 interface Movable {
     void moveTo(int x, int y); // 抽象方法
-    
+
     // Java 8+ default方法
     default void defaultMove() {
         System.out.println("Default move implementation");
@@ -204,21 +205,21 @@ interface Movable {
 // 一个类实现多个接口
 class Circle implements Drawable, Movable {
     private int radius; // 实例变量
-    
+
     public Circle(int radius) {
         this.radius = radius;
     }
-    
+
     @Override
     public void draw() {
         System.out.println("Circle has been drawn");
     }
-    
+
     @Override
     public void moveTo(int x, int y) {
         System.out.println("Circle moved to x=" + x + ", y=" + y);
     }
-    
+
     // 使用default方法
     public void moveWithDefault() {
         defaultMove();
@@ -254,7 +255,7 @@ new InputStreamReader(),
 new BufferedReader().readLine()
 
 可参考
->
+
 > [Java 语言 -2025fa-yy 重点 #IO 流 | HeZzz](http://hez2z.github.io/2025/11/04/Java%E8%AF%AD%E8%A8%80-2025fa-yy%E9%87%8D%E7%82%B9/#IO%E6%B5%81)
 >
 > [Java 语言 - 2023fa - 回忆版 #IO 缺语句填空 | HeZzz](http://hez2z.github.io/2025/11/05/Java%E8%AF%AD%E8%A8%80-2023fa-%E5%9B%9E%E5%BF%86%E7%89%88/#IO-%E7%BC%BA%E8%AF%AD%E5%8F%A5%E5%A1%AB%E7%A9%BA%EF%BC%88%E9%87%8D%E7%82%B9%E5%86%85%E5%AE%B9%EF%BC%89)
@@ -283,17 +284,17 @@ public class NumberSorter {
         // 创建集合存储数字
         ArrayList<Integer> numbers = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        
+
         // 输入5个数字
         System.out.println("请输入5个整数（每行一个）：");
         for (int i = 0; i < 5; i++) {
             System.out.print("数字 " + (i + 1) + ": ");
             numbers.add(scanner.nextInt());
         }
-        
+
         // 排序集合
         Collections.sort(numbers);
-        
+
         // 输出排序结果
         System.out.println("\n排序后的结果：");
         for (int num : numbers) {
@@ -515,7 +516,7 @@ class NumberStatsThread extends Thread {
         Scanner scanner = new Scanner(System.in);
         String input;
         System.out.println("请输入整数（输入 'exit' 结束）：");
-        
+
         // 循环读入数字
         while (true) {
             input = scanner.nextLine();
@@ -529,21 +530,21 @@ class NumberStatsThread extends Thread {
                 System.out.println("请输入有效的整数或 'exit' 结束。");
             }
         }
-        
+
         // 计算最小值、最大值和平均值
         if (numbers.size() > 0) {
             int min = numbers.get(0);
             int max = numbers.get(0);
             int sum = 0;
-            
+
             for (int num : numbers) {
                 if (num < min) min = num;
                 if (num > max) max = num;
                 sum += num;
             }
-            
+
             double average = (double) sum / numbers.size();
-            
+
             // 输出结果
             System.out.println("最小值: " + min);
             System.out.println("最大值: " + max);

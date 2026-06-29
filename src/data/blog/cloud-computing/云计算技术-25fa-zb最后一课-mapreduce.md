@@ -7,6 +7,7 @@ tags:
   - "云计算技术"
 description: "云计算技术 2025 秋季学期最后一课中 MapReduce 部分的内容整理。"
 ---
+
 云计算技术最后一课的 MapReduce 部分内容整理。
 
 ## 题目
@@ -55,11 +56,11 @@ Apply the Map function to this matrix and vector. Then, identify all the key-val
 
 Solution:
 
-Each $m_{ij}$ is multiplied by $v_j$, and this product forms the value of a key-value pair that has key $i$, the row number.  
+Each $m_{ij}$ is multiplied by $v_j$, and this product forms the value of a key-value pair that has key $i$, the row number.
 
 每个 $m_{ij}$ 乘以 $v_j$，该乘积形成一个键值对的值，该键值对的键为 $i$，即行号。
 
-Thus, in row-major order, the sixteen key-value pairs produced are:  
+Thus, in row-major order, the sixteen key-value pairs produced are:
 
 这样，按行优先顺序，产生的十六个键值对是：
 
@@ -87,13 +88,13 @@ Consider a simple example:
 举一个简单的例子：
 
 - We have a large dataset where input keys are strings and input values are integers.
-    我们有一个大型数据集，其中输入键是字符串，输入值是整数。
+  我们有一个大型数据集，其中输入键是字符串，输入值是整数。
 - We wish to compute the mean of all integers associated with the same key (rounded to the nearest integer).
-    我们希望计算与同一键关联的所有整数的平均值(四舍五入到最接近的整数)。
+  我们希望计算与同一键关联的所有整数的平均值(四舍五入到最接近的整数)。
 - A real-world example might be a large user log from a popular website, where keys represent user ids and values represent some measure of activity such as elapsed time for a particular session.
-    一个现实的例子可能是来自一个流行网站的大型用户日志，其中键表示用户 ID，值表示某种活动的度量，例如特定会话的经过时间。
+  一个现实的例子可能是来自一个流行网站的大型用户日志，其中键表示用户 ID，值表示某种活动的度量，例如特定会话的经过时间。
 - A program Tommy has implemented the problem on MapReduce. He has written a few versions with the pseudo code shown in Figures 1—4.
-    Tommy 实现了 MapReduce 上的问题。他编写了几个版本，伪代码如图 1-4 所示。
+  Tommy 实现了 MapReduce 上的问题。他编写了几个版本，伪代码如图 1-4 所示。
 
 ## Solution 1
 
@@ -157,13 +158,13 @@ class REDUCER
 Figure 2. Computing the Mean: Version 2
 
 - Combiner must have the same input and output key-value type
-    Combiner 必须具有相同的输入和输出键值类型
+  Combiner 必须具有相同的输入和输出键值类型
 - Combiners are optimizations that cannot change the correctness of the algorithm.
-    Combiners 是优化，不能改变算法的正确性。
+  Combiners 是优化，不能改变算法的正确性。
 - If Combiner removed, the output value type of the mapper is integer, so the reducer expects to receive a list of integers as values. **But the reducer actually expects a list of pairs!**
-    如果移除 Combiner，mapper 的输出值类型是整数，因此 reducer 期望接收一个整数列表作为值。**但实际上 reducer 期望的是一对对的列表！**
+  如果移除 Combiner，mapper 的输出值类型是整数，因此 reducer 期望接收一个整数列表作为值。**但实际上 reducer 期望的是一对对的列表！**
 - The correctness of the algorithm is contingent on the combiner running on the output of the mappers, and more specifically, that the combiner is run exactly once.
-    算法的正确性取决于 combiner 在 mappers 输出上运行，更具体地说，combiner 必须恰好运行一次。
+  算法的正确性取决于 combiner 在 mappers 输出上运行，更具体地说，combiner 必须恰好运行一次。
 
 ## Solution 3
 
@@ -199,13 +200,13 @@ class REDUCER
 Figure 3. Computing the Mean: Version 3
 
 - In the mapper we emit as the value a pair consisting of the integer and one—this corresponds to a partial count over one instance.
-    在 Mapper 中，我们发出一个由整数和一组成的对作为值——这对应于一个实例的部分计数。
+  在 Mapper 中，我们发出一个由整数和一组成的对作为值——这对应于一个实例的部分计数。
 - The combiner separately aggregates the partial sums and the partial counts (as before), and emits pairs with updated sums and counts.
-    Combiner 分别聚合部分和与部分计数(如前所述)，并发出具有更新和计数的对。
+  Combiner 分别聚合部分和与部分计数(如前所述)，并发出具有更新和计数的对。
 - The reducer is similar to the combiner, except that the mean is computed at the end.
-    Reducer 类似于 combiner，只是最后计算平均值。
+  Reducer 类似于 combiner，只是最后计算平均值。
 - In essence, this algorithm transforms a non-associative operation (mean of numbers) into an associative operation (element-wise sum of a pair of numbers, with an additional division at the very end).
-本质上，该算法将非结合操作(数字的平均值)转换为结合操作(数字对的逐元素求和，最后进行额外的除法)。
+  本质上，该算法将非结合操作(数字的平均值)转换为结合操作(数字对的逐元素求和，最后进行额外的除法)。
 
 ## Solution 4
 
@@ -229,18 +230,18 @@ class MAPPER
 Figure 4. Computing the Mean: Version 4
 
 - Inside the mapper, the partial sums and counts associated with each string are held in memory across input key-value pairs.
-    在 mapper 中，与每个字符串关联的部分和与计数在输入键值对之间保存在内存中。
+  在 mapper 中，与每个字符串关联的部分和与计数在输入键值对之间保存在内存中。
 - Intermediate key-value pairs are emitted only after the entire input split has been processed; similar to before, the value is a pair consisting of the sum and count.
-    仅在处理完整个输入拆分后才发出中间键值对；与之前类似，值是由和与计数组成的一对。
+  仅在处理完整个输入拆分后才发出中间键值对；与之前类似，值是由和与计数组成的一对。
 
 ## Summary
 
 - Mapper and Reducer is the key operation of divide and conquer.
-    Mapper 和 Reducer 是分而治之的关键操作。
+  Mapper 和 Reducer 是分而治之的关键操作。
 - Combiner is an optimization step to reduce the amount of data transmission
-    Combiner 是减少数据传输量的优化步骤。
+  Combiner 是减少数据传输量的优化步骤。
 - Leverage the design of Mapreduce program. (How to partition the data)
-    利用 Mapreduce 程序的设计。(如何划分数据)
+  利用 Mapreduce 程序的设计。(如何划分数据)
 
 > PS: 内容与 zb 的 PPT 内容一致，仅作整理记录之用。
 >
